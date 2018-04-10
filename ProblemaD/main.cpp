@@ -11,8 +11,8 @@ int main()
     for (int i = 0; i < t; ++i)
     {
         cin >> a >> b;
-        if (abs(a) < abs(b)) cout << "<" << "\n";
-        else if (abs(a) > abs(b)) cout << ">" << "\n";
+        if (a < b) cout << "<" << "\n";
+        else if (a > b) cout << ">" << "\n";
         else cout << "=" << "\n";
     }
     return 0;
