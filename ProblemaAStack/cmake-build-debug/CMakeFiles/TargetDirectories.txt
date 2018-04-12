@@ -1,0 +1,3 @@
+C:/Users/Anselmo/Documents/GitHub/ClubAlgoritmia/ProblemaAStack/cmake-build-debug/CMakeFiles/ProblemaAStack.dir
+C:/Users/Anselmo/Documents/GitHub/ClubAlgoritmia/ProblemaAStack/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Anselmo/Documents/GitHub/ClubAlgoritmia/ProblemaAStack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
