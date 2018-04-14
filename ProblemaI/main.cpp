@@ -17,11 +17,11 @@ struct Hotel
 int main()
 {
     int n, b, h, w;
-    cin >> n >> b >> h >> w;
     vector<Hotel> hoteles;
     vector<int> preciosFinales;
     int precioFinal = 0;
 
+    cin >> n >> b >> h >> w;
     for (int i = 0; i < h; ++i)
     {
         int precio;
@@ -43,18 +43,20 @@ int main()
         for (int camasDisponibles: hotel.CamasDisponiblesFin)
         {
             if (n > camasDisponibles) continue;
-            else preciosFinales.push_back(n * hotel.PrecioPersona);
+            preciosFinales.push_back(n * hotel.PrecioPersona);
+            break;
         }
     }
 
-    if (precioFinal > 0)
+    if (preciosFinales.size() > 0)
     {
         precioFinal = preciosFinales[0];
-        for (int k = 1; k < preciosFinales.size(); ++k)
-            precioFinal = min(precioFinal, preciosFinales[k]);
+        for (int precio:preciosFinales)
+            precioFinal = min(precioFinal, precio);
     }
 
     if (precioFinal > 0) cout << precioFinal << "\n";
     else cout << "stay home" << "\n";
+
     return 0;
 }
