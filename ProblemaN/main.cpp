@@ -25,10 +25,10 @@ int main()
         float totalCen = 0;
         vector<LetraP> letras;
         cin >> k;
+        char let;
+        float centavos;
         for (int j = 0; j < k; ++j)
         {
-            char let;
-            float centavos;
             cin >> let >> centavos;
             LetraP nuevaLetra = LetraP(let, centavos);
             letras.push_back(nuevaLetra);
@@ -36,11 +36,10 @@ int main()
 
         int m = 0;
         cin >> m;
+        string linea;
         for (int j = 0; j <= m; ++j)
         {
-            string linea;
             getline(cin, linea);
-
             for (auto c:linea)
             {
                 for (auto l:letras)
@@ -55,6 +54,8 @@ int main()
         }
 
         float total = totalCen / 100;
-        cout << total << "$" << "\n";
+        if (total == 0) cout << "0.00$" << "\n";
+        else cout << total << "$" << "\n";
     }
+    return 0;
 }
